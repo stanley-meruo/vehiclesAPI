@@ -8,7 +8,17 @@ dotenv.config();
 const app = express();
 
 // CORS Middleware
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:3000", // for local dev
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // Body Parser
 app.use(express.json());
