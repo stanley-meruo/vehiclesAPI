@@ -10,8 +10,9 @@ const app = express();
 // CORS Middleware
 app.use(
   cors({
-    origin: "http://localhost:3000", // or "*" temporarily
-    credentials: true,
+    origin: "*", // <-- Allow all for now
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
   })
 );
 
