@@ -8,13 +8,7 @@ dotenv.config();
 const app = express();
 
 // CORS Middleware
-app.use(
-  cors({
-    origin: "*", // <-- Allow all for now
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
+app.use(cors());
 
 // Body Parser
 app.use(express.json());
