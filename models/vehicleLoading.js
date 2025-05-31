@@ -34,7 +34,7 @@ const vehicleLoadingSchema = new mongoose.Schema(
 
     iconTitle: {
       type: String,
-      default: [],
+      default: "",
     },
     iconName: {
       type: [String], //array of icons
