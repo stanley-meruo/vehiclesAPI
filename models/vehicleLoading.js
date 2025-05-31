@@ -8,7 +8,7 @@ const vehicleLoadingSchema = new mongoose.Schema(
       required: true,
     },
     description: {
-      type: [String],
+      type: String,
       required: true,
     },
     mainImage: {
@@ -32,12 +32,11 @@ const vehicleLoadingSchema = new mongoose.Schema(
       index: true,
     },
 
-    icon_title: {
+    iconTitle: {
       type: String,
-      default: "Default Icon Title",
-      required: false,
+      default: [],
     },
-    icon_name: {
+    iconName: {
       type: [String], //array of icons
       default: [], // Optional array with default
     },
@@ -46,22 +45,31 @@ const vehicleLoadingSchema = new mongoose.Schema(
       default: [],
     },
 
-    title: {
-      type: [String],
-      default: [],
-    },
-    descriptions: {
-      type: [String],
-      default: [],
-    },
-    image: {
-      type: [String], //array of images
-      default: [],
-    },
+    slideTitle: {
+        type: [String],
+        default: [],
+      },
+    slideDescriptions: {
+        type: [String],
+        default: [],
+      },
 
-    additional_services: {
-      type: [String],
-      default: [],
+    sectionTitle: {
+        type: [String],
+        default: [],
+      },
+    sectionDescriptions: {
+        type: [String],
+        default: [],
+      },
+    sectionImage: {
+        type: [String], //array of images
+        default: [],
+      },
+
+    additionalServices: {
+        type: [String],
+        default: [],
     },
 
     status: {
