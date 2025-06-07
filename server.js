@@ -10,6 +10,7 @@ const app = express();
 // CORS Middleware
 const allowedOrigins = [
   "http://localhost:3000", // for local dev
+  "https://mda-shipping-tau.vercel.app/",
 ];
 
 app.use(
